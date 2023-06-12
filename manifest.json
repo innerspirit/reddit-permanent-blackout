@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Reddit Permanent Blackout",
+  "description": "This extension displays a blackout page for any page visited on reddit.com.",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "https://www.reddit.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.reddit.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
